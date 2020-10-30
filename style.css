@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.table-box
+{
+    margin: 50px auto;
+    
+
+}
+.table-row
+{
+    display: table;
+    
+    width: 80%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    background: transparent;
+    padding: 12px 0;
+    color: #0c2727;
+    font-size: 14px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,50,0.4);
+
+}
+.table-cell
+{
+    display: table-cell;
+    background-color: #B4CDCD;
+    width: 30%;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px lightpink;
+    vertical-align: middle;
+}

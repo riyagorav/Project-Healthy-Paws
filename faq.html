@@ -1,0 +1,74 @@
+<html>
+<head>
+ <title>HealthyPaws - FAQ</title> 
+<link href="style2.css" rel="stylesheet" type="text/css">
+</head>
+<body background="faqpage3.jpg">
+<body>
+<center><h1>Fequently Asked Questions</h1></Center>
+    <header>
+        <center> 
+        <div class="wrapper">
+            <ul class="nav-area">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="petcare.html">Pet Care</a></li>
+                <li><a href="veterinarian.html">Veterinrian</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    </div>
+    </center>
+    </header>
+<br>
+<br>
+<center>
+ <form>
+     <div class="infoform">
+         <div class="main">
+    <div>
+        <input type="text" id="txtName" placeholder="Enter your Concerns" />
+    </div>
+    <div>
+        <br>
+        <input type="button" id="submit" value="Submit" onclick="saveFile()" />
+        <br>
+    </div>
+</div>
+</div>
+</form>
+
+
+</center>
+</body>
+<script>
+    let saveFile = () => {
+    	
+        // Get the data from each element on the form.
+    	const name = document.getElementById('txtName');
+
+        // This variable stores all the data.
+        let data = 
+            '\r Query: ' + name.value;
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'formData.txt';	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
+</script>
+</html>
+ 

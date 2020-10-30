@@ -1,0 +1,27 @@
+body
+{
+background-size: cover;
+}
+h1{
+color:black;
+font-size:36pt;
+text-transform:uppercase;
+font-family:sans-serif;
+}
+h2{
+color:black;
+font-size:18pt;
+font-family:sans-serif;
+}
+p{
+color: white;
+font-size:18pt;
+font-family:sans-serif;
+text-transform:capitalize;
+}
+input[type=text]{
+width: 40%;
+border: 2px solid;
+border-radius:4px;
+margin: 8px;
+}
